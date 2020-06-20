@@ -1,0 +1,29 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.jumbotron{
+    background: #FC466B;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3F5EFB, #FC466B);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3F5EFB, #FC466B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    margin-top: 50px;
+}
+.rest-heading{
+    font-weight: 500;
+    color: white;
+
+}
+.rest-para{
+    letter-spacing: 1.4;
+    margin-top: 20px;
+    color: white;
+}
+table{
+    width: 100%;
+    margin-top: 30px;
+}
+th,td{
+    border: 1px solid gray;
+    text-align: left;
+    padding: 10px;
+}
