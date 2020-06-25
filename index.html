@@ -16,60 +16,70 @@
         </div>
     </div>
     <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <table>
-                    <tr>
-                        <th>Name</th>
-                        <th>Path</th>
-                        <th>HTTP Verb</th>
-                        <th>Purpose</th>
-                    </tr>
-                    <tr style="background-color: rgb(209, 204, 204);">
-                        <td>index</td>
-                        <td>/blogs</td>
-                        <td>GET</td>
-                        <td>List of all blogs</td>
-                    </tr>
-                    <tr style="background-color: rgb(152, 231, 152);">
-                        <td>New</td>
-                        <td>/blogs/new</td>
-                        <td>GET</td>
-                        <td>Show new blog form</td>
-                    </tr>
-                    <tr style="background-color: rgb(152, 231, 152);">
-                        <td>Create</td>
-                        <td>/blogs</td>
-                        <td>POST</td>
-                        <td>Create new blog and redirects somewhere</td>
-                    </tr>
-                    <tr style="background-color: rgb(136, 204, 231);">
-                        <td>Show</td>
-                        <td>/blogs/:id</td>
-                        <td>GET</td>
-                        <td>Show info about one specific blog</td>
-                    </tr>
-                    <tr style="background-color: rgb(243, 250, 151);">
-                        <td>Edit</td>
-                        <td>/blogs/:id/edit</td>
-                        <td>GET</td>
-                        <td>Show edit form for particular blog</td>
-                    </tr>
-                    <tr style="background-color: rgb(243, 250, 151);">
-                        <td>Update</td>
-                        <td>/blogs/:id</td>
-                        <td>PUT</td>
-                        <td>Update a particular blog, then redirect somewhere</td>
-                    </tr>
-                    <tr style="background-color: rgb(250, 166, 151);">
-                        <td>Destroy</td>
-                        <td>/blogs/:id</td>
-                        <td>DELETE</td>
-                        <td>Delete a particular blog, then redirect somewhere</td>
-                    </tr>
+            <div class="table-responsive">
+                <table class="table table-hover table-bordered">
+                    <thead class="thead-light">
+                        <tr>
+                            <th>Name</th>
+                            <th>Path</th>
+                            <th>HTTP Verb</th>
+                            <th>Purpose</th>
+                            <th>Mongoose Method</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background-color: rgb(209, 204, 204);">
+                            <td>index</td>
+                            <td>/blogs</td>
+                            <td>GET</td>
+                            <td>List of all blogs</td>
+                            <td>Blog.find()</td>
+                        </tr>
+                        <tr style="background-color: rgb(152, 231, 152);">
+                            <td>New</td>
+                            <td>/blogs/new</td>
+                            <td>GET</td>
+                            <td>Show new blog form</td>
+                            <td>N/A</td>
+                        </tr>
+                        <tr style="background-color: rgb(152, 231, 152);">
+                            <td>Create</td>
+                            <td>/blogs</td>
+                            <td>POST</td>
+                            <td>Create new blog and redirects somewhere</td>
+                            <td>Blog.create()</td>
+                        </tr>
+                        <tr style="background-color: rgb(136, 204, 231);">
+                            <td>Show</td>
+                            <td>/blogs/:id</td>
+                            <td>GET</td>
+                            <td>Show info about one specific blog</td>
+                            <td>Blog.findById()</td>
+                        </tr>
+                        <tr style="background-color: rgb(243, 250, 151);">
+                            <td>Edit</td>
+                            <td>/blogs/:id/edit</td>
+                            <td>GET</td>
+                            <td>Show edit form for particular blog</td>
+                            <td>Blog.findById()</td>
+                        </tr>
+                        <tr style="background-color: rgb(243, 250, 151);">
+                            <td>Update</td>
+                            <td>/blogs/:id</td>
+                            <td>PUT</td>
+                            <td>Update a particular blog, then redirect somewhere</td>
+                            <td>Blog.findByIdAndUpdate</td>
+                        </tr>
+                        <tr style="background-color: rgb(250, 166, 151);">
+                            <td>Destroy</td>
+                            <td>/blogs/:id</td>
+                            <td>DELETE</td>
+                            <td>Delete a particular blog, then redirect somewhere</td>
+                            <td>Blog.findByIdAndRemove()</td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
-        </div>
     </div>
 
 
